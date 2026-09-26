@@ -224,7 +224,7 @@ class _VideoPlayerViewState extends State<VideoPlayerView> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: Colors.black60,
+                      color: Colors.black54,
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
