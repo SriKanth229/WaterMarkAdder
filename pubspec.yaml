@@ -1,0 +1,40 @@
+name: watermark_adder
+description: "A modern Flutter application for adding customizable watermarks to videos locally on Android using FFmpeg."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Media Selection & Storage
+  image_picker: ^1.1.2
+  path_provider: ^2.1.5
+  path: ^1.9.0
+  
+  # Local Video Processing (GPL includes drawtext and freetype font rendering)
+  ffmpeg_kit_flutter_min_gpl: ^6.0.3
+  
+  # Video Playback Preview
+  video_player: ^2.9.2
+  
+  # Permissions & Gallery Saving
+  permission_handler: ^11.3.1
+  gal: ^2.3.1
+  share_plus: ^10.1.2
+  
+  # UI & Icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
