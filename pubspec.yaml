@@ -23,7 +23,7 @@ dependencies:
   
   # Permissions & Gallery Saving
   permission_handler: ^11.3.1
-  gal: ^2.3.4
+  gal: ^2.3.3
   share_plus: ^10.1.2
   
   # UI & Icons
