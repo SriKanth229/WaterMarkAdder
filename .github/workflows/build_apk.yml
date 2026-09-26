@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Code
@@ -33,6 +33,19 @@ jobs:
 
       - name: Get Dependencies
         run: flutter pub get
+
+      # Fix old gal Android Gradle configuration
+      - name: Patch gal Android build.gradle
+        run: |
+          GAL_FILE="$HOME/.pub-cache/hosted/pub.dev/gal-2.3.3/android/build.gradle"
+
+          echo "Before patch:"
+          cat "$GAL_FILE"
+
+          sed -i 's/flutter.compileSdkVersion/35/g' "$GAL_FILE"
+
+          echo "After patch:"
+          cat "$GAL_FILE"
 
       - name: Build Release APK
         run: flutter build apk --release
